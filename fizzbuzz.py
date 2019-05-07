@@ -1,4 +1,5 @@
 import json
+import sys
 
 
 class InvalidDictionaryError(Exception):
@@ -7,7 +8,7 @@ class InvalidDictionaryError(Exception):
         return "dictionary.json is in an invalid format entries must be in form of \"int\":\"text\""
 
 
-def fizzbuzz(val, replacements):
+def fizzbuzz(val, replacements={}):
     # replaces number with correct string from replacement list
     line = ""
     for num in replacements.keys():
@@ -31,17 +32,17 @@ def dictionary_checker(replacements):
         raise InvalidDictionaryError
 
 
-def main():
+def main(n=100):
     with open("dictionary.json", 'r') as dictionary:
         replacements = json.load(dictionary)
         dictionary_checker(replacements)
-    n = 100
     for i in range(n):
         print(fizzbuzz(i+1, replacements))
     return
 
 
 if __name__ == "__main__":
-    main()
+    main(int(sys.argv[1]))
+    #main(20)
 
 

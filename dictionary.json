@@ -1,7 +1,13 @@
 {
-    "2": "fizz",
-    "3": "buzz",
-    "5": "bish",
-    "7": "bash",
-    "11": "bosh"
+    "3": "fizz",
+    "5": "buzz",
+    "7": "bish",
+    "11": "bash",
+    "13": "bosh",
+    "17": "snap",
+    "19": "crackle",
+    "23": "pop",
+    "29": "ready",
+    "31": "steady",
+    "37": "go"
 }
