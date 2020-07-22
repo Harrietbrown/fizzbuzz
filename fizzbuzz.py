@@ -35,7 +35,7 @@ def main():
     with open("dictionary.json", 'r') as dictionary:
         replacements = json.load(dictionary)
         dictionary_checker(replacements)
-    n = 100
+    n = 50
     for i in range(n):
         print(fizzbuzz(i+1, replacements))
     return
